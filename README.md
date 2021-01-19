@@ -1,2 +1,2 @@
 ## instagram clone with Go
-instagram clone Django->Go
+instagram clone Django->Go.
