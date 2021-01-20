@@ -9,8 +9,9 @@ import (
 )
 
 type user struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
+	ID       int    `json:"id"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
 }
 
 var users = map[int]*user{}
@@ -43,7 +44,7 @@ func updateUser(c echo.Context) error {
 		return err
 	}
 	id, _ := strconv.Atoi(c.Param("id"))
-	users[id].Name = u.Name
+	users[id].Password = u.Password
 	return c.JSON(http.StatusOK, users[id])
 }
 
